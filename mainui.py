@@ -180,4 +180,4 @@ class Ui_MainWindow(object):
         self.generate_p.setText(_translate("MainWindow", "生成信息表"))
         self.seekv.setText(_translate("MainWindow", "浏览"))
         self.seekp.setText(_translate("MainWindow", "浏览"))
-
+#hahahahaha
