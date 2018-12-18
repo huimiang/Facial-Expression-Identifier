@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="topframe">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1280</width>
+      <height>120</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(191, 45, 45);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="title">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>25</y>
+       <width>331</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+font: Bold 75 24pt &quot;Microsoft YaHei UI&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;人脸情绪识别&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="sideframe">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>120</y>
+      <width>200</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(245, 245, 247);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(136, 136, 136);
+font: 75 15pt &quot;Microsoft YaHei UI&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;请选择输入模式&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="videoinput">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>350</y>
+       <width>160</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	font: 30pt &quot;Microsoft YaHei UI&quot;;
+                   background-color:rgb(245, 245, 247);                  
+                   border-radius:10px;                 
+                   border-color:rgba(255,255,255,30);    
+                   font:bold 20px;                       
+                   color:rgb(119, 119, 119);                
+                                          
+                   }
+
+
+QPushButton:hover{
+                   background-color:rgb(209, 209, 211);
+                   border-color:rgba(255,255,255,30);
+                   border-style:inset;
+                   color:rgb(0, 0, 0);
+                   }
+
+
+
+                   
+               </string>
+     </property>
+     <property name="text">
+      <string>视频输入</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="photoinput">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>160</y>
+       <width>160</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	font: 30pt &quot;Microsoft YaHei UI&quot;;
+                   background-color:rgb(209, 209, 211);                  
+                   border-radius:10px;                 
+                   border-color:rgba(255,255,255,30);    
+                   font:bold 20px;                       
+                   color:rgb(0, 0, 0);                
+                                          
+                   }</string>
+     </property>
+     <property name="text">
+      <string>图片输入</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="generate_v">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>640</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	font: 30pt &quot;Microsoft YaHei UI&quot;;
+                   background-color:rgb(209, 209, 211);                  
+                   border-radius:10px;                 
+                   border-color:rgba(255,255,255,30);    
+                   font:bold 20px;                       
+                   color:rgb(0, 0, 0);                
+                                          
+                   }</string>
+    </property>
+    <property name="text">
+     <string>生成曲线图</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="generate_p">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>640</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	font: 30pt &quot;Microsoft YaHei UI&quot;;
+                   background-color:rgb(209, 209, 211);                  
+                   border-radius:10px;                 
+                   border-color:rgba(255,255,255,30);    
+                   font:bold 20px;                       
+                   color:rgb(0, 0, 0);                
+                                          
+                   }</string>
+    </property>
+    <property name="text">
+     <string>生成信息表</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="findfile">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>160</y>
+      <width>541</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>431</width>
+       <height>51</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="seekv">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>10</y>
+       <width>93</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(242, 242, 242);
+border-radius:8px;   </string>
+     </property>
+     <property name="text">
+      <string>浏览</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="seekp">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>10</y>
+       <width>93</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(242, 242, 242);
+border-radius:8px;   </string>
+     </property>
+     <property name="text">
+      <string>浏览</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="picture">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>220</y>
+      <width>671</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="picture_v">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>671</width>
+       <height>391</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="picture_p">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>85</y>
+       <width>660</width>
+       <height>200</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="imageshow">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>130</y>
+      <width>171</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="afterimageshow">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>140</y>
+      <width>91</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>generate_v</zorder>
+   <zorder>topframe</zorder>
+   <zorder>sideframe</zorder>
+   <zorder>generate_p</zorder>
+   <zorder>findfile</zorder>
+   <zorder>picture</zorder>
+   <zorder>imageshow</zorder>
+   <zorder>afterimageshow</zorder>
+   <zorder>seekv</zorder>
+   <zorder>textEdit</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>videoinput</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>video_mode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>114</x>
+     <y>345</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>photoinput</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>image_mode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>130</x>
+     <y>538</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>609</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>generate_v</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>generate_view_of_videos()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>770</x>
+     <y>633</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>882</x>
+     <y>664</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>generate_p</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>generate_view_of_images()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>721</x>
+     <y>633</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>537</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>seekp</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>get_image()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>903</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1199</x>
+     <y>487</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>seekv</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>get_video()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>917</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1079</x>
+     <y>588</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>get_video()</slot>
+  <slot>video_mode()</slot>
+  <slot>image_mode()</slot>
+  <slot>get_image()</slot>
+  <slot>generate_view_of_images()</slot>
+  <slot>generate_view_of_videos()</slot>
+ </slots>
+</ui>
